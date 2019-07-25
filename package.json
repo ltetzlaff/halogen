@@ -2,7 +2,10 @@
   "name": "halogen",
   "version": "0.2.0",
   "description": "A collection of loading spinners with React.js",
-  "main": "Halogen.js",
+  "main": "src/Halogen.js",
+  "files": [
+    "src"
+  ],
   "author": "Yuanyan Cao, Vladymir Gonzalez",
   "license": "MIT",
   "repository": {
