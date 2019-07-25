@@ -1,0 +1,9 @@
+{
+  "extends": "tslint-lt",
+  "rules": {
+    "no-null-keyword": false,
+    "interface-name": false,
+    "no-magic-numbers": false,
+    "variable-name": false
+  }
+}

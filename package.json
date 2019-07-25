@@ -2,10 +2,16 @@
   "name": "halogen",
   "version": "0.2.0",
   "description": "A collection of loading spinners with React.js",
-  "main": "src/Halogen.js",
   "files": [
-    "src"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint --format stylish --project .",
+    "prettier": "prettier --config node_modules/tslint-lt/.prettierrc.yml --write \"**/*.{ts,tsx,css,scss,html,js,jsx,yml,json,md}\" \"!{,dist}/**\"",
+    "test": "npm run prettier && npm run build && npm run lint",
+    "prepare": "npm run build"
+  },
   "author": "Yuanyan Cao, Vladymir Gonzalez",
   "license": "MIT",
   "repository": {
@@ -14,13 +20,17 @@
   },
   "dependencies": {
     "domkit": "0.0.1",
+    "preact": "^10.0.0-rc.0",
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tslint-lt": "^1.10.6",
+    "typescript": "^3.5.3"
+  },
   "keywords": [
     "react",
     "react-component",
