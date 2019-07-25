@@ -51,7 +51,7 @@
     "react": "global:React"
   },
   "scripts": {
-    "release": "gulp release"
+    "prepare": "gulp release"
   },
   "keywords": [
     "react",
