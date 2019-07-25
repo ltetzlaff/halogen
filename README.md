@@ -1,12 +1,11 @@
-Halogen [![npm version](https://badge.fury.io/js/halogen.svg)](http://badge.fury.io/js/halogen)
-=======
+# Halogen [![npm version](https://badge.fury.io/js/halogen.svg)](http://badge.fury.io/js/halogen)
 
 [![Pair on this](https://tf-assets-staging.s3.amazonaws.com/badges/thinkful_repo_badge.svg)](http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=halogen)
 
 A collection of loading spinners with React.js.
 
-* React 0.14+ Use `halogen 0.2`
-* React 0.12+ Use `halogen 0.1`
+- React 0.14+ Use `halogen 0.2`
+- React 0.12+ Use `halogen 0.1`
 
 ## Demo & Examples
 
@@ -34,37 +33,35 @@ npm install halogen --save
 ## Usage
 
 ```javascript
-var Loader = require('halogen/PulseLoader');
+var Loader = require("halogen/PulseLoader")
 var Example = React.createClass({
   render: function() {
-    return (
-      <Loader color="#26A65B" size="16px" margin="4px"/>
-    );
+    return <Loader color="#26A65B" size="16px" margin="4px" />
   }
-});
+})
 ```
 
 ## Loaders
 
-* PulseLoader
-* RotateLoader
-* BeatLoader
-* RiseLoader
-* SyncLoader
-* GridLoader
-* ClipLoader
-* FadeLoader
-* ScaleLoader
-* SquareLoader
-* PacmanLoader
-* SkewLoader
-* RingLoader
-* MoonLoader
-* DotLoader
-* BounceLoader
+- PulseLoader
+- RotateLoader
+- BeatLoader
+- RiseLoader
+- SyncLoader
+- GridLoader
+- ClipLoader
+- FadeLoader
+- ScaleLoader
+- SquareLoader
+- PacmanLoader
+- SkewLoader
+- RingLoader
+- MoonLoader
+- DotLoader
+- BounceLoader
 
 ## Browser Support
 
-![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-IE 10+ ✔ | Chrome 4.0+ ✔ | Firefox 16.0+ ✔ | Opera 15.0+ ✔ | Safari 4.0+ ✔ |
+| ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png) |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| IE 10+ ✔                                                                                               | Chrome 4.0+ ✔                                                                        | Firefox 16.0+ ✔                                                                         | Opera 15.0+ ✔                                                                     | Safari 4.0+ ✔                                                                        |
