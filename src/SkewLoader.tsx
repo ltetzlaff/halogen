@@ -28,13 +28,11 @@ SkewLoader.defaultProps = {
 }
 
 export default function SkewLoader(props: ILoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(props)}></div>
-      </div>
-    )
-  )
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(props)}></div>
+    </div>
+  ) : null
 }
 
 function getSharpStyle({ size, verticalAlign, color }: ILoaderProps) {

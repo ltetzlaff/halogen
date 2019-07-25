@@ -26,15 +26,13 @@ BeatLoader.defaultProps = {
 }
 
 export default function BeatLoader(props: ILoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(1, props)}></div>
-        <div style={getStyle(2, props)}></div>
-        <div style={getStyle(3, props)}></div>
-      </div>
-    )
-  )
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(1, props)}></div>
+      <div style={getStyle(2, props)}></div>
+      <div style={getStyle(3, props)}></div>
+    </div>
+  ) : null
 }
 function getBallStyle({ color, size, margin, verticalAlign }: ILoaderProps) {
   return {

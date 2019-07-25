@@ -28,17 +28,15 @@ ScaleLoader.defaultProps = {
 }
 
 export default function ScaleLoader(props: IExtendedLoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(1, props)}></div>
-        <div style={getStyle(2, props)}></div>
-        <div style={getStyle(3, props)}></div>
-        <div style={getStyle(4, props)}></div>
-        <div style={getStyle(5, props)}></div>
-      </div>
-    )
-  )
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(1, props)}></div>
+      <div style={getStyle(2, props)}></div>
+      <div style={getStyle(3, props)}></div>
+      <div style={getStyle(4, props)}></div>
+      <div style={getStyle(5, props)}></div>
+    </div>
+  ) : null
 }
 
 function getLineStyle({

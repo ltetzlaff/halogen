@@ -25,15 +25,13 @@ SyncLoader.defaultProps = {
 
 const animationName = insertKeyframesRule(keyframes)
 export default function SyncLoader(props: ILoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(1, props)}></div>
-        <div style={getStyle(2, props)}></div>
-        <div style={getStyle(3, props)}></div>
-      </div>
-    )
-  )
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(1, props)}></div>
+      <div style={getStyle(2, props)}></div>
+      <div style={getStyle(3, props)}></div>
+    </div>
+  ) : null
 }
 function getBallStyle({ color, size, verticalAlign, margin }: ILoaderProps) {
   return {

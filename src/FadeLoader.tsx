@@ -29,22 +29,20 @@ export default function FadeLoader(props: IExtendedLoaderProps) {
     position: "relative",
     fontSize: 0
   }
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={style}>
-          <div style={getStyle(1, props)}></div>
-          <div style={getStyle(2, props)}></div>
-          <div style={getStyle(3, props)}></div>
-          <div style={getStyle(4, props)}></div>
-          <div style={getStyle(5, props)}></div>
-          <div style={getStyle(6, props)}></div>
-          <div style={getStyle(7, props)}></div>
-          <div style={getStyle(8, props)}></div>
-        </div>
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={style}>
+        <div style={getStyle(1, props)}></div>
+        <div style={getStyle(2, props)}></div>
+        <div style={getStyle(3, props)}></div>
+        <div style={getStyle(4, props)}></div>
+        <div style={getStyle(5, props)}></div>
+        <div style={getStyle(6, props)}></div>
+        <div style={getStyle(7, props)}></div>
+        <div style={getStyle(8, props)}></div>
       </div>
-    )
-  )
+    </div>
+  ) : null
 }
 function getLineStyle({
   color,

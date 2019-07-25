@@ -27,13 +27,11 @@ SquareLoader.defaultProps = {
   size: "50px"
 }
 export default function SquareLoader(props: ILoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(props)}></div>
-      </div>
-    )
-  )
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(props)}></div>
+    </div>
+  ) : null
 }
 
 function getSquareStyle({ color, size, verticalAlign }: ILoaderProps) {

@@ -25,13 +25,11 @@ ClipLoader.defaultProps = {
 }
 
 export default function ClipLoader(props: ILoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(props)}></div>
-      </div>
-    )
-  )
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(props)}></div>
+    </div>
+  ) : null
 }
 
 function getBallStyle({ size, color, verticalAlign }: ILoaderProps) {

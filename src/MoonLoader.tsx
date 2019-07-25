@@ -18,16 +18,14 @@ MoonLoader.defaultProps = {
   size: "60px"
 }
 export default function MoonLoader(props: ILoaderProps) {
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={getStyle(0, props)}>
-          <div style={getStyle(1, props)}></div>
-          <div style={getStyle(2, props)}></div>
-        </div>
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={getStyle(0, props)}>
+        <div style={getStyle(1, props)}></div>
+        <div style={getStyle(2, props)}></div>
       </div>
-    )
-  )
+    </div>
+  ) : null
 }
 function getBallStyle(size: number, { verticalAlign }: ILoaderProps) {
   return {

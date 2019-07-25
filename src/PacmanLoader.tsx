@@ -18,19 +18,17 @@ export default function PacmanLoader(props: ILoaderProps) {
     position: "relative",
     fontSize: 0
   }
-  return (
-    props.loading && (
-      <div id={props.id} className={props.className}>
-        <div style={style}>
-          <div style={getStyle(1, props)} />
-          <div style={getStyle(2, props)} />
-          <div style={getStyle(3, props)} />
-          <div style={getStyle(4, props)} />
-          <div style={getStyle(5, props)} />
-        </div>
+  return props.loading ? (
+    <div id={props.id} className={props.className}>
+      <div style={style}>
+        <div style={getStyle(1, props)} />
+        <div style={getStyle(2, props)} />
+        <div style={getStyle(3, props)} />
+        <div style={getStyle(4, props)} />
+        <div style={getStyle(5, props)} />
       </div>
-    )
-  )
+    </div>
+  ) : null
 }
 
 function getBallStyle({ color, size, verticalAlign, margin }: ILoaderProps) {
